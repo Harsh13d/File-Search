@@ -52,7 +52,7 @@ class BinaryTree {
   _searchNode(node, key) {
     if (node === null) return null;
     if (key === node.key) return node.value;
-    if ((key < node, key)) return this._searchNode(node.left, key);
+    if ((key < node.key)) return this._searchNode(node.left, key);
     return this._searchNode(node.right, key);
   }
 
