@@ -5,7 +5,14 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
+// Configure CORS to allow requests only from your frontend
+const corsOptions = {
+  origin: "https://file-search-anshika.vercel.app", // Allow only this frontend
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization",
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const tree = new BinaryTree();
