@@ -26,7 +26,7 @@ export default function Home() {
   // Handle file search
   const handleSearch = async () => {
     try {
-      const res = await fetch(`https://file-search-ecru.vercel.app/search?key=${query}`);
+      const res = await fetch(`https://file-search-devharsh.onrender.com/search?key=${query}`);
       const data: SearchResult = await res.json();
       setResult(data);
     } catch (error) {
@@ -46,7 +46,7 @@ export default function Home() {
     formData.append("file", file);
 
     try {
-      const res = await fetch("https://file-search-ecru.vercel.app/upload", {
+      const res = await fetch("https://file-search-devharsh.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
