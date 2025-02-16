@@ -14,7 +14,7 @@ const ViewTree = () => {
   useEffect(() => {
     const fetchTree = async () => {
       try {
-        const response = await fetch("https://file-search-ecru.vercel.app/show-tree"); // Ensure the route matches your backend API
+        const response = await fetch("https://file-search-devharsh.onrender.com/show-tree"); // Ensure the route matches your backend API
         const data = await response.json();
         setTreeData(data["data"]);
       } catch (error) {
